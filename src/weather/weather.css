@@ -68,3 +68,8 @@ body {
     text-align: center;
 }
 
+.not_found {
+    width: 50px;
+    margin: auto;
+    height: 70px;
+}

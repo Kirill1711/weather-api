@@ -15,6 +15,7 @@ import scattered_clouds from './image/weather/scattered clouds.png';
 import shower_rain from './image/weather/shower rain.png';
 import snow from './image/weather/snow.png';
 import thunderstorm from './image/weather/thunderstorm.png';
+import not_found from './image/not_found.png';
 
 const Weather = () => {
     const [value, setValue] = useState('');
@@ -62,7 +63,10 @@ const Weather = () => {
         .then((data) => {
           if (data.cod === '404') {
             setTimeout(() => {
-              setElem('not found')
+              setElem(<div className='weather'>
+                <p>Не найдено!</p>
+                <img className='not_found' src={not_found} alt="not found" />
+              </div>);
             },1000);
           } else {
           setTimeout(() =>{
